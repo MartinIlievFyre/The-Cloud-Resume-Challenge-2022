@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: '2010-09-09-OC'
+Description: default template generated for organization with master account 979823462719
+
+Organization:
+  ManagementAccount:
+    Type: OC::ORG::MasterAccount
+    Properties:
+      AccountName: martin-iliev
+      AccountId: '979823462719'
+      RootEmail: ilievv.aws@outlook.com
+
+  OrganizationRoot:
+    Type: OC::ORG::OrganizationRoot
+    Properties:
+      DefaultOrganizationAccessRoleName: OrganizationAccountAccessRole
+
+  OuProdOU:
+    Type: OC::ORG::OrganizationalUnit
+    Properties:
+      OrganizationalUnitName: OU-Prod
+
+  OuTestOU:
+    Type: OC::ORG::OrganizationalUnit
+    Properties:
+      OrganizationalUnitName: OU-Test
